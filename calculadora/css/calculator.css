@@ -44,6 +44,11 @@ body {
   box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
   transform: scale(0.95);
 }
+.calculator [type=button]:disabled,
+[type=button] [disabled] {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+  cursor: not-allowed;
+}
 
 #calculatorScreen {
   position: absolute;
@@ -55,6 +60,10 @@ body {
 }
 
 .NormalButton {
+  float: left;
+  margin-left: 15px;
+}
+.OperationButton {
   float: left;
   margin-left: 15px;
 }
@@ -91,4 +100,8 @@ body {
   left: 25px;
   top: 197px;
   float: left;
+}
+
+.pressedOperator{
+  color: orange !important;
 }
