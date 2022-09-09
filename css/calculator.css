@@ -1,0 +1,107 @@
+body {
+  background-color: grey;
+}
+
+.calculator {
+  position: absolute;
+  width: 486px;
+  height: 640px;
+  left: 477px;
+  top: 214px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 30px;
+}
+
+.calculator input.large {
+  color: orange;
+  width: 412.77px;
+}
+
+.calculator [type=button] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 90px;
+  height: 50px;
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  border-radius: 30px;
+  border: 1px solid #8F9092;
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 0 #CECFD1;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+  margin-top: 10px;
+}
+
+.calculator [type=button]:active:not([disabled]),
+[type=button] :active:not([disabled]) {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+  transform: scale(0.95);
+}
+.calculator [type=button]:disabled,
+[type=button] [disabled] {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+  cursor: not-allowed;
+}
+
+#calculatorScreen {
+  position: absolute;
+  width: 426px;
+  height: 80px;
+  left: 30px;
+  top: 22px;
+  float: left;
+}
+
+.NormalButton {
+  float: left;
+  margin-left: 15px;
+}
+.OperationButton {
+  float: left;
+  margin-left: 15px;
+}
+
+.ClearButton {
+  margin-top: 50px;
+  float: left;
+  margin-left: 15px;
+}
+
+#textInScreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+  border-radius: 20px;
+  border: 1px solid #8F9092;
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 0 #CECFD1;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+  margin-top: 0px;
+  position: absolute;
+  width: 426px;
+  height: 80px;
+}
+
+#keyboard {
+  position: absolute;
+  width: 436px;
+  height: 640px;
+  left: 25px;
+  top: 197px;
+  float: left;
+}
+
+.pressedOperator{
+  color: orange !important;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>calculator</title>
+    <link rel="stylesheet" href="css/calculator.css">
+    <script src="/js/Calculator.js"></script>
+    <script src="/js/Status_helper.js"></script>
+    <script src="/js/Math_helper.js"></script>
+</head>
+<body>
+    <div class="calculator">
+        <form id="calculatorForm">
+            <div id="calculatorScreen">
+                <p id="textInScreen" value="0" data-testid="display">0</p>
+            </div>
+            <div id="keyboard">
+                <div id="columnOne" class="NormalButton">
+                    <input type="button" value="7" data-testid="7" onclick="IntroduceNumber('7')"/>
+                    <input type="button" value="4" data-testid="4" onclick="IntroduceNumber('4')"/>
+                    <input type="button" value="1" data-testid="1" onclick="IntroduceNumber('1')"/>
+                    <input id=zero type="button" value="0" data-testid="0" onclick="IntroduceNumber('0')"/>
+                </div>
+                <div id="columnTwo" class="NormalButton">
+                    <input type="button" value="8" data-testid="8" onclick="IntroduceNumber('8')"/>
+                    <input type="button" value="5" data-testid="5" onclick="IntroduceNumber('5')"/>
+                    <input type="button" value="2" data-testid="2" onclick="IntroduceNumber('2')"/>
+                    <input id=comma type="button" value="," data-testid="," onclick="IntroduceNumber(',')"/>
+                </div>
+                <div id="columnThree" class="NormalButton">
+                    <input type="button" value="9" data-testid="9" onclick="IntroduceNumber('9')"/>
+                    <input type="button" value="6" data-testid="6" onclick="IntroduceNumber('6')"/>
+                    <input type="button" value="3" data-testid="3" onclick="IntroduceNumber('3')"/>
+                    <input id=negative class = "operator" type="button" value="+/-" data-testid="+-" onclick="ChangeSignButtonIsUsed()"/>
+                </div>
+                <div id="columnFour" class="OperationButton">
+                    <input id = division class = "operator" type="button" value="/" data-testid="/" onclick="IntroduceOperator('/'),SetHighlight(event.currentTarget.classList)"/>
+                    <input id = multiplication class = "operator" type="button" value="*" data-testid="*" onclick="IntroduceOperator('*'),SetHighlight(event.currentTarget.classList)"/>
+                    <input id = addition class = "operator" type="button" value="+" data-testid="+" onclick="IntroduceOperator('+'),SetHighlight(event.currentTarget.classList)"/>
+                    <input id = substraction class = "operator" type="button" value="-" data-testid="-" onclick="IntroduceOperator('-'),SetHighlight(event.currentTarget.classList)"/>
+                </div>
+                <div id="downSideOfCalculator" class="ClearButton">
+                    <input type="button" class="large" value="=" data-testid="=" onclick="GetResult()"/>
+                    <input id = clear type="button" class="large" value="C" data-testid="C" onclick="ResetCalculator()"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
